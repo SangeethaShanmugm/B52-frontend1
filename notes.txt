@@ -1,0 +1,43 @@
+HTML  => Hyper Text Markup Language
+
+hypertext => refers to connect web pages to one another
+
+markup => display content on web browser =>  include elements i.e. img, header, footer, p
+
+
+shift + 1 => html template 
+
+extension  => live server
+
+
+p => 16px
+
+h1 => 34px
+h2 -> 32px
+h3 => 24px
+h4 => 20px
+h5 -> 18px
+h6 -> 16px
+
+Block level elements
+----------------------
+
+>> starts on the new line
+>> Occupy the whole width
+>> eg: p, heading, div
+
+Inline elements
+-----------------
+>> Start in the same line
+>> Only take space which is required
+>> eg. img, a, span
+
+
+10-10-23  => Task
+---------
+
+4. Use certain HTML elements to display the following in a HTML page.
+
+Check other input types  => date, file, 
+
+
