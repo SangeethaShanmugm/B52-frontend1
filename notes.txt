@@ -10,6 +10,10 @@ shift + 1 => html template
 extension  => live server
 
 
+HTML => raw structure
+CSS => look & feel(design)
+
+
 p => 16px
 
 h1 => 34px
@@ -41,3 +45,37 @@ Inline elements
 Check other input types  => date, file, 
 
 
+
+
+section  => follow single pattern or theme
+
+div => doesn't follow or convey any meaning
+
+CSS => Cascading Style Sheet
+
+3 ways to define CSS
+------------------------
+
+
+1. inline styling =  style="color: blue; text-align:center; background-color: aquamarine; font-size: 50px "
+ >> style attribute inside html tags
+ 
+ 
+2. internal styling 
+ >>   <style>
+        h3 {
+            color: purple
+        }
+    </style>
+
+
+  >> <style> </style>  => tag in head  
+
+3. external styling =>     <link rel="stylesheet" href="styles.css" />
+  >> <link> tag in head and calling css file
+
+
+  BoxModel
+  Selector
+  display
+  Position

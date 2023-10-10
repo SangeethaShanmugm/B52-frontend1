@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+    <style>
+        h1 {
+            background-color: lightblue;
+        }
+
+        #welcome {
+            background-color: lightgreen;
+        }
+
+        .city {
+            background-color: pink !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- id, class, tag selector -->
+    <h1 id="welcome" class="city">City</h1>
+    <h1>Bangalore</h1>
+    <h1>Hello</h1>
+    <p>Hello</p>
+    <h1>London</h1>
+    <!-- tag > class || parent > class -->
+    <div class="city">
+        <h1>London</h1>
+        <p>London is Captial of England</p>
+    </div>
+
+    <div class="city">
+        <h1>Paris</h1>
+        <p>Paris is Captial of France</p>
+    </div>
+
+
+</body>
+
+</html>
