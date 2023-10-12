@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            justify-content: center;
+            grid-template-columns: repeat(3, 1fr);
+            /* grid-template-rows: 50px 200px; */
+            background-color: skyblue;
+            gap: 10px;
+            height: 500px;
+        }
+
+        .gallery_img {
+            /* width: 500px;
+            height: 500px; */
+        }
+
+        .grid-container>div {
+            background-color: pink;
+            font-size: 30px;
+            padding: 20px;
+            height: 100px;
+            width: 100px;
+        }
+
+        .item1 {
+            /* grid-column-start: 1;
+            grid-column-end: 3; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <!-- <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+        <div class="item10">10</div> -->
+    </div>
+
+    <!-- <div class="grid-container">
+        <div class="item1">
+            <figure class="gallery_item ">
+                <img class="gallery_img"
+                    src="https://plus.unsplash.com/premium_photo-1696879454010-6aed21c32fc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary1</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_2">
+                <img class="gallery_img"
+                    src="https://images.unsplash.com/photo-1696928634052-41aa345ef686?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary2</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_3">
+                <img class="gallery_img"
+                    src="https://images.unsplash.com/photo-1682687982468-4584ff11f88a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwzMXx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary3</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_4">
+                <img class="gallery_img"
+                    src="https://images.unsplash.com/photo-1696827926099-c4eab4331e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary4</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_5">
+                <img class="gallery_img"
+                    src="https://images.unsplash.com/photo-1682687220015-186f63b8850a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary5</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_6">
+                <img class="gallery_img"
+                    src="https://plus.unsplash.com/premium_photo-1673491311218-3a0956bff47e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary6</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_7">
+                <img class="gallery_img"
+                    src="https://images.unsplash.com/photo-1696827926099-c4eab4331e51?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary4</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_8">
+                <img class="gallery_img"
+                    src="https://images.unsplash.com/photo-1682687220015-186f63b8850a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwzNnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary5</figcaption>
+            </figure>
+        </div>
+        <div>
+            <figure class="gallery_item gallery_item_9">
+                <img class="gallery_img"
+                    src="https://plus.unsplash.com/premium_photo-1673491311218-3a0956bff47e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" />
+                <figcaption>Scenary6</figcaption>
+            </figure>
+        </div>
+    </div> -->
+</body>
+
+</html>
