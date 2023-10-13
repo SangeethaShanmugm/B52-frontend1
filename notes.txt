@@ -90,3 +90,21 @@ visibility: hidden => will occupy space
 display: block & visibility : visible => text will be visible
 
   Position
+
+
+
+
+   Flex - one dimensional layout - either rows or column
+
+justify-content =>align along the main axis(left - right)
+
+align-items => cross axis
+
+align-content => main axis =>all items as single item(flex-wrap to be used)
+
+
+
+
+Grid -  two dimensional layout - both rows or column
+
+justify-content => 
