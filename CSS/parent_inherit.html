@@ -5,6 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One:ital@1&family=Roboto:wght@700&display=swap"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/c4338603d0.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image" href="https://icons8.com/icon/swoL_zWlOGpk/font-awesome" />
+
     <style>
         span {
             color: blue
@@ -17,15 +27,39 @@
 
         p {
             border: medium dashed;
+            font-family: 'Alumni Sans Collegiate One', sans-serif;
+            /* font-family: 'Roboto', sans-serif; */
         }
 
         em {
             border: inherit;
         }
 
-        #lineargrad {
+        .fa-brands {
+            color: blue
+        }
+
+        /* #lineargrad {
             background-image: linear-gradient(to right top, #00ACC1, #FFF176);
-            /* #00695C, #283593, #7986CB */
+            #00695C, #283593, #7986CB
+        } */
+
+        @media screen and (max-width: 600px) {
+            body {
+                background-color: skyblue;
+            }
+        }
+
+        @media screen and (min-width: 601px) {
+            body {
+                background-color: pink;
+                font-size: 40px;
+
+            }
+
+            p {
+                border: medium solid;
+            }
         }
     </style>
 </head>
@@ -39,6 +73,12 @@
 
     <p>This para is an example of <em>parent inherit</em></p>
     <p>Hello Everyone</p>
+    <i class="fa-brands fa-google"></i>
+    <i class="fa-solid fa-plane-circle-check"></i>
+    <i class="fa-brands fa-facebook-f"></i>
+
+
+
 </body>
 
 </html>

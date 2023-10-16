@@ -108,3 +108,18 @@ align-content => main axis =>all items as single item(flex-wrap to be used)
 Grid -  two dimensional layout - both rows or column
 
 justify-content => 
+
+
+Bootstrap
+------------
+
+Frontend Framework
+Predefined Templates => button, table, forms, images carousels....
+
+
+Advantages
+----------
+>> Easy and faster
+>> Responsive
+>> Mobile-first approach
+>> Browser compatibility
