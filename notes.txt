@@ -167,4 +167,7 @@ lg => ≥1200px
 
 
 
-
+DOM
+-----
+Document Object Model  => represent  webpage in tree like structure/ structured hierarchical way 
+>> target html elements to manipulate 

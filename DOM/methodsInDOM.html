@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is DOM</h1>
+    <div id="myPara" class="myClassDiv">This is an example for creatElement()<span>Hello</span> <b>InnerHTML</b>
+        <div>Hello</div>
+    </div>
+
+    <div id="myDIV" class="myClassDiv">
+        <h1>I am inside DIV element</h1>
+    </div>
+
+
+
+    <p class="myClassDiv">This is a para</p>
+    <a id="myAnch" target="_blank">I am an anchor tag without href</a>
+    <h3>Welcome Everyone</h3>
+    <button onclick="e3()">Click on Me</button>
+    <h4>Hello</h4>
+    <script>
+        //create Element
+        const e1 = document.createElement("p")
+        e1.innerText = "I am a first paragraph"
+        console.log(e1)
+
+        //append to body
+        document.body.appendChild(e1)
+
+
+        //create div element
+        const e2 = document.createElement("p")
+        e2.innerText = "I am a second paragraph"
+        console.log(e2)
+
+        //append to body
+        document.getElementById("myDIV").append(e2)
+
+
+        //acnhor tag
+        const e3 = document.getElementById("myAnch").setAttribute("href", "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction")
+        console.log(e3)
+
+        // function e3() {
+        //     document.getElementById("myAnch").setAttribute("href", "https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction")
+        // }
+
+        let result = document.getElementById("myDIV")
+        let getAttr = result.getAttribute("style")
+        console.log(getAttr)
+
+
+        let myAnchor = document.getElementById("myAnch")
+        let res = myAnchor.getAttribute("target")
+        console.log(res)
+
+
+        // let myBut = document.getElementsByTagName("p")[2]
+        // console.log(myBut)
+        // let out = myBut.getAttribute("onclick")
+        // console.log(out)
+
+        //innerHTML and innerText
+
+        let x = document.getElementById("myPara").innerText
+        let y = document.getElementById("myPara").innerHTML
+        let z = document.getElementById("myPara").textContent
+        console.log(x)
+        console.log(y)
+        console.log(z)
+
+
+        // let divTag = document.querySelector(".myClassDiv")
+        // divTag.style.backgroundColor = "pink"
+
+
+        let divTag = document.querySelectorAll(".myClassDiv")
+        // divTag[2].style.backgroundColor = "pink"
+        for (let i = 0; i < divTag.length; i++) {
+            divTag[i].style.backgroundColor = "pink"
+            divTag[i].style.fontSize = "20px"
+            divTag[i].style.border = "1px solid green"
+            console.log(divTag)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
