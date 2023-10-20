@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <script src="calc.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                Calc
+            </div>
+            <div class="panel-body">
+                <div class="form-group">
+                    <label>First</label>
+                    <input class="form-control" id="first" onChange="result()" />
+                </div>
+                <div class="form-group">
+                    <label>Second</label>
+                    <input class="form-control" id="second" />
+                </div>
+                <p class="output"> </p>
+                <button class="btn btn-success" onClick="calc('Add')"><span
+                        class="glyphicon glyphicon-plus"></span></button>
+                <button class="btn btn-danger" onClick="calc('Sub')"><span
+                        class="glyphicon glyphicon-minus"></span></button>
+                <button onClick="document.getElementById('time').innerHTML=Date()">Current Time</button>
+                <p id="time"></p>
+                <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)" style="background-color: lightblue;">
+                    Hello</div>
+                <!-- <div id="myDiv">example for addEventListener</div> -->
+                <button id="myDiv">Click on
+                    Me</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
