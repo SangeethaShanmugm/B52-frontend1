@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="colorElem" onmouseover="colorElement()">This is DIV element</div>
+
+    <span id="data">
+        <p>I am Para</p>
+    </span>
+
+
+    <!-- coordinates -->
+
+    <h1 onclick="showcoordinates(event)">Click on h1 to get clientX and clientY</h1>
+    <span id="coordinates"></span>
+    <script>
+        function colorElement() {
+            document.getElementById("colorElem").style.backgroundColor = "green"
+
+        }
+        // let content = prompt("Enter anything")
+        // if (content != "") {
+        //     document.getElementById("data").innerHTML = content
+        //     console.log(content)
+        // }
+
+        function showcoordinates(event) {
+            let xCoords = event.clientX;
+            let yCoords = event.clientY
+            let coordinates = `X-coordinates ${xCoords} & Y-coordinates ${yCoords}`
+            console.log(coordinates)
+            document.getElementById("coordinates").innerHTML = coordinates
+        }
+
+
+    </script>
+
+</body>
+
+</html>

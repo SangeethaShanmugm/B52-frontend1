@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <textarea id="textCount" oninput="characterCount()"></textarea>
+    <span id="charCount">0 Character</span>
+    <script>
+        function characterCount() {
+            let text = document.getElementById("textCount").value
+            console.log(text.length)
+            document.getElementById("charCount").innerHTML = `${text.length} Character`
+        }
+    </script>
+</body>
+
+</html>
