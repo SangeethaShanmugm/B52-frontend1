@@ -5,7 +5,7 @@ const quizData = [
         b: "C",
         c: "JavaScript",
         d: "Python",
-        answer: "c"
+        correct: "c"
     },
     {
         question: "What does CSS stands for?",
@@ -13,7 +13,7 @@ const quizData = [
         b: "Cascading Style sheet",
         c: "Cascading Simple Sheet",
         d: "Cascading sheet Style",
-        answer: "b"
+        correct: "b"
     },
     {
         question: "What does HTMl stands for?",
@@ -21,7 +21,7 @@ const quizData = [
         b: "HyperText Markdown Language",
         c: "HyperText Machine Language",
         d: "HyperText Main Language",
-        answer: "a"
+        correct: "a"
     }
 ]
 
@@ -51,9 +51,12 @@ const dOption = document.getElementById("dOption")
 //submit btn
 let submitBtn = document.getElementById("submit")
 
-let currentQuizCount = 2;
+let currentQuizCount = 0;
+let score = 0
 
 function loadQuiz() {
+
+    deSelectOption()
     //quizData[0]
 
     let currentQuizData = quizData[currentQuizCount]
@@ -69,11 +72,15 @@ function loadQuiz() {
 loadQuiz()
 
 
+function deSelectOption() {
+    optionList.forEach((element) => element.checked = false)
+}
+
 function getSelected() {
     let selectedAnswer;
     optionList.forEach((element) => {
         if (element.checked) {
-            console.log(element.id)
+            // console.log(element.id)
             selectedAnswer = element.id
         }
     })
@@ -84,4 +91,22 @@ function getSelected() {
 submitBtn.addEventListener("click", () => {
     let answer = getSelected()
     console.log(answer)
+    if (answer) {
+        console.log(true)
+
+        if (answer === quizData[currentQuizCount].correct) {
+            console.log(true)
+            score++
+            console.log("Score", score)
+        }
+        currentQuizCount++
+
+        if (currentQuizCount < quizData.length) {
+            loadQuiz()
+        } else {
+            quiz.innerHTML = (`<h2>Your Score is ${score}/${quizData.length}</h2>`)
+            document.body.style.backgroundImage = "url('https://i.ibb.co/frqqx3S/glitterimg.jpg')"
+        }
+    }
+
 })

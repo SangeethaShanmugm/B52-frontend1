@@ -171,3 +171,6 @@ DOM
 -----
 Document Object Model  => represent  webpage in tree like structure/ structured hierarchical way 
 >> target html elements to manipulate 
+
+Callback => calling a function inside another function
+
