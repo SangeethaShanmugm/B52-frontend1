@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        a = 10
+        console.log(a)
+
+        setTimeout(() => {
+            console.log(1)
+        }, 3000)
+        //callStack => WebApi=> timer run => callBack Q=>wait for callstack to be empty
+        console.log(30)
+        console.log(0)
+        console.log(50)
+        console.log(30)
+        console.log(0)
+        console.log(50)
+        console.log(30)
+        console.log(0)
+        console.log(50)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <span id="spanTag"></span>
+
+
+    <script>
+        var spanTag = document.getElementById("spanTag")
+        console.log(spanTag)
+
+        const p = new Promise(() => { })
+        console.log(p)
+        //Uncaught TypeError: Promise constructor cannot be invoked without 'new'
+        //Uncaught TypeError: Promise resolver undefined is not a function
+
+        const p1 = new Promise((resolve, reject) => {
+            resolve("Hello")
+            reject("welcome")
+        })
+        console.log(p1)
+        //Promise {<rejected>: 'welcome'}
+        //Promise {<fulfilled>: 'Hello'}
+
+
+        var age = 20
+        const p3 = new Promise((resolve, reject) => {
+            if (age > 15) {
+                resolve("Eligible student")
+            } else {
+                reject("Not Eligible student")
+            }
+        })
+
+        console.log(p3)
+
+
+        // const success = true
+
+        // let successValue = new Promise((resolve, reject) => {
+        //     if (success) {
+        //         resolve("There is a success value")
+        //     }
+        //     else {
+        //         reject("There is no success value")
+        //     }
+        // })
+        // console.log(successValue)
+        const result = 1
+        let successValue = new Promise((resolve, reject) => {
+            // resolve("Promise resolved")
+            reject("Promise rejected")
+        })
+
+
+        //execute when promise is successfully resolved
+        successValue
+            .then(function success(result) {
+                console.log(result)
+            })
+            .then(function success1() {
+                console.log("Promise then method")
+            })
+            .then(function success1() {
+                console.log("Promise then method no 2")
+            })
+            //execute when there is an error
+            .catch((err) => {
+                console.log("Rejected so its throwing error")
+            })
+
+        // console.log(successValue)
+
+
+        // const cart = ["shoes", "pants", "tshirt"]
+
+        // // createOrder(cart, function () {
+        // //     proceedToPayment(orderId)
+
+        // // }) //return orderId
+
+
+        // const promise = createOrder(cart) // promise => state, result
+
+
+        // promise.then(function (orderId) {
+        //     proceedToPayment(orderId)
+        // })
+    </script>
+</body>
+
+</html>
