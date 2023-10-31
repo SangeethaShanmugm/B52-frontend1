@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //extract the cityName from restCountries and pass it to weather API
+
+        var apiKey = "2558952ed209b7b24ab70f771c61ff65"
+
+        //async await 
+        async function getDataByCityName() {
+            try {
+                let res = await fetch("https://restcountries.com/v3.1/all")
+                let data = await res.json()
+                console.log(data)
+                const cityName = data[0].name.common
+                console.log(cityName)
+
+                let res1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
+                let data1 = await res1.json()
+                console.log(data1)
+                console.log(`${cityName}'s Maximum Temp is ${data1.main.temp.toFixed()}°C`)
+            }
+            catch (err) {
+                console.log("Error found", err)
+            }
+
+
+        }
+        // getDataByCityName()
+
+
+
+        async function getDataByRandomCityName() {
+            try {
+                let res = await fetch("https://restcountries.com/v3.1/all")
+                let data = await res.json()
+                console.log(data)
+                const index = Math.round(Math.random() * data.length)
+                console.log(index)
+                const cityName = data[index].name.common
+                console.log(cityName)
+
+                let res1 = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
+                let data1 = await res1.json()
+                console.log(data1)
+                console.log(`${cityName}'s Maximum Temp is ${data1.main.temp.toFixed()}°C`)
+            }
+            catch (err) {
+                console.log("Error found", err)
+            }
+
+
+        }
+        getDataByRandomCityName()
+
+
+
+    </script>
+</body>
+
+</html>
