@@ -16,7 +16,7 @@
     <script>
 
 
-        let url = "https://6541cd35f0b8287df1fee5de.mockapi.io/users"
+        let url = "https://6541cd35f0b8287df1fee5de.mockapi.io/user"
         console.log(url)
 
         async function getUserData() {
@@ -82,6 +82,29 @@
         }
         // deleteUserById(2)
 
+
+        //update user by id
+
+        async function updateUserData() {
+            let updatedUser = {
+                name: "Harishri",
+                email: "hari@gmail.com",
+            }
+
+            //post 
+            // 1. method - PUT
+            // 2. headers => data is in jSON 
+            // 3. body => JSON.stringify
+            let data = await fetch(url + "/5", {
+                method: "PUT",
+                headers: { "Content-Type": "application/json" },
+                //pass data in body
+                body: JSON.stringify(updatedUser)
+            })
+            let res = await data.json()
+            console.log(res)
+        }
+        updateUserData()
 
     </script>
 
