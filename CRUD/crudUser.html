@@ -69,7 +69,20 @@
             console.log(res)
         }
 
-        createUserData() 
+        // createUserData()
+
+        //delete 
+
+        async function deleteUserById(id) {
+            let data = await fetch(url + "/" + id, {
+                method: "DELETE"
+            })
+            let res = await data.json()
+            console.log(res)
+        }
+        // deleteUserById(2)
+
+
     </script>
 
 </body>
