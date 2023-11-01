@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    C - Create -> POST
+    R - Read -> GET
+    U - Update -> PUT
+    D - Delete -> delete
+    <script>
+
+
+        let url = "https://6541cd35f0b8287df1fee5de.mockapi.io/users"
+        console.log(url)
+
+        async function getUserData() {
+            let data = await fetch(url, {
+                method: "GET"
+            })
+            let res = await data.json()
+            console.log(res)
+            console.table(res);
+
+        }
+        getUserData()
+
+
+        //get /read user by ID
+        const id = 2
+        console.log(`${url}/${id}`)
+        console.log(url + "/" + id)//concat
+
+        async function getUserById() {
+            let data = await fetch(`${url}/${id}`, {
+                method: "GET"
+            })
+            let res = await data.json()
+            console.log(res)
+
+        }
+        getUserById()
+
+
+        //create 
+
+        async function createUserData() {
+            let newUser = {
+                name: "Prudhvi",
+                email: "prudhvi@gmail.com",
+            }
+
+            //post 
+            // 1. method - POST
+            // 2. headers => data is in jSON 
+            // 3. body => JSON.stringify
+            let data = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                //pass data in body
+                body: JSON.stringify(newUser)
+            })
+            let res = await data.json()
+            console.log(res)
+        }
+
+        createUserData() 
+    </script>
+
+</body>
+
+</html>
