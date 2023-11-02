@@ -20,10 +20,15 @@ function createTableRow(value1, value2, id) {
     td2.setAttribute('id', `email${id}`)
     td1.innerHTML = value1
     td2.innerHTML = value2
-    td3.innerHTML = "<button>Edit</button><button>Delete</button>"
+    td3.innerHTML = `<button type="button" class='btn btn-primary'  id='edit${id}' onClick='getModal(${id},${value1},${value2})' data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button><button class='btn btn-danger' id='delete${id}' onClick='deleteUserById(${id})'>Delete</button>`
     console.log(value1, value2)
     tr.append(td1, td2, td3)
     itemList.append(tr)
+}
+
+
+function getModal(${id},${value1},${value2}){
+    
 }
 
 
@@ -84,3 +89,14 @@ async function createUserData() {
 
 }
 
+
+async function deleteUserById(id) {
+    console.log(id)
+    let data = await fetch(url + "/" + id, {
+        method: "DELETE"
+    })
+    let res = await data.json()
+    console.log(res)
+    itemList.innerHTML = ""
+    getUserData()
+}
