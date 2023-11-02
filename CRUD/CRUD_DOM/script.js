@@ -20,16 +20,51 @@ function createTableRow(value1, value2, id) {
     td2.setAttribute('id', `email${id}`)
     td1.innerHTML = value1
     td2.innerHTML = value2
-    td3.innerHTML = `<button type="button" class='btn btn-primary'  id='edit${id}' onClick='getModal(${id},${value1},${value2})' data-bs-toggle="modal" data-bs-target="#exampleModal">Edit</button><button class='btn btn-danger' id='delete${id}' onClick='deleteUserById(${id})'>Delete</button>`
+    td3.innerHTML = `<button type="button" class='btn btn-primary'  id='edit${id}' onClick="getModal('${id}','${value1}','${value2}')" data-bs-toggle="modal" data-bs-target=#exampleModal${id}>Edit</button><button class='btn btn-danger' id='delete${id}' onClick='deleteUserById(${id})'>Delete</button>`
     console.log(value1, value2)
     tr.append(td1, td2, td3)
     itemList.append(tr)
 }
 
 
-function getModal(${id},${value1},${value2}){
-    
+function getModal(id, value1, value2) {
+    console.log(id, value1, value2)
+    const modal = document.createElement('span')
+    console.log(modal)
+    modal.innerHTML =
+        `<div div class="modal fade" id=exampleModal${id} role='dialog' tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Update User</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="mb-3">
+                                <label for=modalname${id} class="form-label">Name</label>
+                               <input type="text" class="form-control" id=modalname${id} value=${value1} aria-describedby="name" />                              
+                            </div>
+                            <div class="mb-3">
+                                <label for=modalemail${id} class="form-label">Email</label>
+                                <input type="text" class="form-control" id=modalemail${id} value=${value2} aria-describedby="email" />                               
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" onClick="">Save Changes</button>
+                    </div>
+                </div>
+            </div> 
+            </div>`
+
+
+    document.body.append(modal)
 }
+
+
+
 
 
 async function getUserData() {
