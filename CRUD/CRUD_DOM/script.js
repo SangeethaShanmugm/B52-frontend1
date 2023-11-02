@@ -53,7 +53,7 @@ function getModal(id, value1, value2) {
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary" onClick="">Save Changes</button>
+                        <button type="button" class="btn btn-primary" onClick='updateUserData(${id})'>Save Changes</button>
                     </div>
                 </div>
             </div> 
@@ -61,6 +61,37 @@ function getModal(id, value1, value2) {
 
 
     document.body.append(modal)
+}
+
+
+
+async function updateUserData(id) {
+
+    let modelName = document.getElementById(`modalname${id}`).value
+    let modelEmail = document.getElementById(`modalemail${id}`).value
+    console.log(modelName, modelEmail)
+
+
+    let updatedUser = {
+        name: modelName,
+        email: modelEmail,
+    }
+
+    //post 
+    // 1. method - PUT
+    // 2. headers => data is in jSON 
+    // 3. body => JSON.stringify
+    let data = await fetch(`${url}/${id}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        //pass data in body
+        body: JSON.stringify(updatedUser)
+    })
+    let res = await data.json()
+    console.log(res)
+    document.getElementById(`name${id}`).innerText = res.name
+    document.getElementById(`email${id}`).innerText = res.email
+
 }
 
 
