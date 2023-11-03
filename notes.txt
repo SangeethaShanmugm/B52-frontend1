@@ -174,3 +174,5 @@ Document Object Model  => represent  webpage in tree like structure/ structured 
 
 Callback => calling a function inside another function
 
+Promise => used to handle asynchronous operation
+>> an object => representing the eventual completion of an asynchronous operation 

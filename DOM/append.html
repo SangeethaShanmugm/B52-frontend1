@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var span = document.createElement('span')
+        span.innerHTML = "this is span"
+        console.log(span)
+
+        var p = document.createElement('p')
+        p.innerHTML = "this is p"
+        console.log(p)
+
+        var p1 = document.createElement('p')
+        p1.innerHTML = "this is p1"
+        console.log(p1)
+
+        var div = document.createElement('div')
+        div.innerText = "this is div"
+        console.log(div)
+
+        div.innerText = "this is p inside div"
+
+        div.innerHTML = "<p>this is p inside div</p>"
+
+
+        var out = span.appendChild(div, p, p1)
+        console.log(out)
+        // span.appendChild(p)
+        document.body.append(span)
+
+        var res = document.querySelector('p')
+
+        console.log("querySelector =>", res)
+
+        var res1 = document.querySelectorAll('p')
+
+        console.log("querySelectorAll =>", res1)
+
+
+    </script>
+
+</body>
+
+</html>
+<!-- 
+<body>
+    <span>this is <span>
+            <p>this is p</p>
+        </span></span>
+</body> -->

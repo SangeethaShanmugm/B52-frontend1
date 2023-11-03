@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var button = document.createElement('button')
+        button.type = "button"
+        button.classList.add('btn', 'btn-primary')
+        console.log(button)
+
+        button.addEventListener('click', foo)
+
+        button.innerHTML = "Click Me"
+
+        document.body.append(button)
+
+        function foo() {
+            var div = document.createElement('div')
+            div.innerHTML = "this is div"
+            console.log(div)
+            div.style.color = "red"
+            div.style.fontSize = "20px"
+            document.body.append(div)
+        }
+
+    </script>
+</body>
+
+</html>
